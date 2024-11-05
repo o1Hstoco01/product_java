@@ -16,7 +16,7 @@ public class Product implements Serializable {
     private double price;
     private String category;
    
-    public long getId() {
+    public Long getId() {
         return id;
     }
     public void setId(long id) {
