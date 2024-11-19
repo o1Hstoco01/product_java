@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.fatec.product.dto.ProductResponse;
 import br.fatec.product.entities.Product;
 import br.fatec.product.services.ProductService;
-import jakarta.persistence.EntityNotFoundException;
 
 @RestController
 @RequestMapping("products")
@@ -25,7 +25,7 @@ public class ProductController {
     private ProductService service;
 
     @GetMapping
-    public ResponseEntity<List<Product>> getProducts() {
+    public ResponseEntity<List<ProductResponse>> getProducts() {
         return ResponseEntity.ok(service.getAllProducts());
         
     }
